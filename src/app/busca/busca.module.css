@@ -1,0 +1,36 @@
+.main {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #141414;
+}
+
+.main h1{
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+}
+@media (max-width: 1200px){
+    .main h1{
+        font-size: 25px;
+    }
+}
+@media (max-width: 1000px){
+    .main h1{
+        font-size: 20px;
+    }
+}
+@media (max-width: 731px){
+    .main h1{
+        font-size: 16px;
+    }
+}
+@media (max-width: 590px){
+    .main h1{
+        font-size: 13px;
+    }
+}
+@media (max-width: 473px){
+    .main h1{
+        font-size: 11px;
+    }
+}

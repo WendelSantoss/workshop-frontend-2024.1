@@ -1,0 +1,74 @@
+.main {
+    padding: 20px 2%;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #141414;
+}
+.cardFilmUnico{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+.boxImg{
+    width: 600px;
+    height: 550px;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.info h2, .info h4, .info h3, .info p{
+    color: white;
+}
+@media (max-width:1200px){
+    .boxImg, .boxImg img{
+        width: 500px;
+        height: 450px;
+    }
+
+}
+@media (max-width:1080px){
+    .boxImg, .boxImg img{
+        width: 450px;
+        height: 400px;
+    }
+
+}
+@media (max-width:900px){
+    .boxImg, .boxImg img{
+        width: 380px;
+        height: 330px;
+    }
+    .info h2{
+        font-size: 19px;
+    }
+    .info h3{
+        font-size: 15px;
+    }
+    .info h4{
+        font-size: 13px;
+    }
+    .info p{
+        font-size: 13px;
+    }
+
+}
+@media (max-width: 700px){
+    .cardFilmUnico{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 420px){
+    .boxImg, .boxImg img{
+        width: 340px;
+        height: 290px;
+    }
+}
+@media (max-width: 370px){
+    .boxImg, .boxImg img{
+        width: 250px;
+        height: 200px;
+    }
+}

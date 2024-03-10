@@ -1,0 +1,88 @@
+.slides{
+    height: 210px;
+    width: 100%;
+}
+.cardMovie{
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 240px;
+    height: 210px;
+    cursor: pointer;
+    position: relative;
+}
+
+.boxNota{
+    position: absolute;
+    text-align: center;
+    padding: 1px;
+    background-color: red;
+    top: 0;
+    right: 0;
+}
+.boxNota p{
+    font-size: 11px;
+    color: white;
+    font-weight: bold;
+}
+@media (max-width:1340px){
+    .cardMovie {
+        width: 210px;
+        height: 180px;
+    }
+    .cardMovie img{
+        width: 210px;
+        height: 180px;
+    }
+}
+@media (max-width:1140px){
+    .cardMovie {
+        width: 190px;
+        height: 180px;
+    }
+    .cardMovie img{
+        width: 190px;
+        height: 180px;
+    }
+    .boxNota p{
+        font-size: 10px;
+    }
+}
+@media (max-width:796px){
+    .cardMovie {
+        width: 180px;
+        height: 170px;
+    }
+    .cardMovie img{
+        width: 180px;
+        height: 170px;
+    }
+    .boxNota p{
+        font-size: 9px;
+    }
+}
+@media (max-width:760px){
+    .cardMovie {
+        width: 195px;
+        height: 170px;
+    }
+    .cardMovie img{
+        width: 195px;
+        height: 170px;
+    }
+    .boxNota p{
+        font-size: 9px;
+    }
+}
+@media (max-width:620px){
+    .cardMovie {
+        width: 180px;
+        height: 170px;
+    }
+    .cardMovie img{
+        width: 180px;
+        height: 170px;
+    }
+    .boxNota p{
+        font-size: 9px;
+    }
+}

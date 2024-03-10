@@ -1,0 +1,26 @@
+.voltar{
+    margin-top: 10px;
+    background-color: red;
+    padding: 10px;
+    width: 80px;
+    text-align: center;
+    border-radius: 8px;
+    color: white;
+}
+.voltar p{
+    color: white;
+    font-weight: bold;
+}
+@media (max-width:700px){
+    .voltar{
+        margin: 10px auto;
+    }
+}
+@media (max-width: 400px){
+    .voltar{
+        width: 60px;
+    }
+    .voltar p{
+        font-size: 12px;
+    }
+}
