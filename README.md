@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Desafio do Processo Seletivo da Fábrica de Software 2024.1
 
-## Getting Started
+- Desfaio proposto para criação de um webSite de filmes, consumindo dados da API https://www.tvmaze.com/api.
+-Requisitos:
+• Um header que contenha no mínimo a logo da Netflix e um link de "INÍCIO."
+• Cada filme ou serie  deve mostrar o título, uma imagem do pôster e uma breve sinopse.
+• Adicionar uma seção de destaque com carrossel, apresentando os fotos de filmes ou séries. (Pode usar bibliotecas como Swiper)
+• Incluir informações adicionais, como avaliação e data de lançamento, nos cartões dos filmes.    
+• Adicionar um campo de pesquisa para permitir que os usuários encontrem episódios específicos pelo título ou pelo nome do ator.
+• Estilizar o layout 100% responsivo para todos os depositívos.
 
-First, run the development server:
+- Todos os requisitos foram concluidos com sucesso. O desafio foi proposto na sexta 08/03, com o prazo de entrega para o domingo 
+10/03 às 12hrs, ou seja menos de 2 dias para  concluir o projeto, logo não pude elaborar algo mais sofisticado, apenas foquei em 
+concluir os requisitos para entregar o projeto em tempo.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+-Tecnolgias e ferramentas utilizadas:
+ • JavaScript
+ • TypeScript
+ • React/Next.Js
+ • Biblioteca Swiper
+ • API: https://www.tvmaze.com/api.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Funcionalidades
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Home, pagina inicial do WebSite: 
+    <div aling='center'>
+     <img src="./public/home.png"/>
+    </div>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Slides utilizando o Swiper, com Filmes e Séries divididas por Gênero:
+    <div aling='center'>
+     <img src="./public/swiper.png"/>
+    </div> 
 
-## Learn More
+-  Quando clicar no card de algum filme ou série, o usuário é direcionado para uma página com mais detalhes sobre a obra selecionada:
+    <div aling='center'>
+     <img src="./public/clickCard.png"/>
+    </div> 
+ 
+- Componente Search para pesquisa de algum produto que possa estar no banco da API utilizada, pesquisas so pelo nome do Filme ou Série: 
+    <div aling='center'>
+     <img src="./public/pesquisaPrint.png"/>
+    </div> 
+     <div aling='center'>
+     <img src="./public/pesquisa2.png"/>
+    </div> 
+- A aplicação se encontra com design responsivo para todos os dispositivos: 
+    <div aling='center'>
+     <img src="./public/responsivo.png"/>
+    </div> 
+     <div aling='center'>
+     <img src="./public/responsivo2.png"/>
+    </div> 
 
-To learn more about Next.js, take a look at the following resources:
+## Deploy 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Pretendo fazer o deploy na vercerl quando tiver mais tempo de implementar na aplicação mais funcionalidades do que deu para fazer, deixando mais sofisticada.

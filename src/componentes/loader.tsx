@@ -12,12 +12,12 @@ export default function Loader(props: carregando){
     return(
         <> 
          
-                <div className={styles.loading}> 
-                    
-                    <p style={{fontSize: tamanhoFonte}}>Dados sendo carregados  </p>
-                    <div className={styles.icon}></div>
+            <div className={styles.loading}> 
                 
-                </div>
+                <p style={{fontSize: tamanhoFonte}}>Dados sendo carregados  </p>
+                <div className={styles.icon}></div>
+            
+            </div>
         
         </>
     )

@@ -8,7 +8,12 @@ import { useState } from "react"
 import MobileIcon from "../../public/mobile.png"
 
 export default function Header(){
+    
     const [pesquisa, setPesquisa]= useState('')
+
+    const [ mobile, setMobile]= useState (false);
+    const hangdleMobile= ()=> setMobile(prev=> !prev);
+    
 
     return(
 
@@ -23,18 +28,22 @@ export default function Header(){
             </div>
 
             <ul className={styles.menu}>
-                <Link href='http://localhost:3000/'>Inicio</Link>
+                <li><Link href='http://localhost:3000/'>Inicio</Link></li>
             </ul>
             
 
             <div className={styles.alinhaEsquerda}>
 
-                <div className={styles.menuMobile}>
+                <div className={styles.mobile}>
 
-                    <Image src={MobileIcon} alt="img mobile"/>
-                    <ul className={styles.menu}>
-                        <Link href='http://localhost:3000/'>Inicio</Link>
-                    </ul>
+                    <Image onClick={hangdleMobile} src={MobileIcon} alt="img mobile"/>
+                    
+                    {mobile &&
+
+                        <ul className={styles.menuMobile}>
+                            <li><Link onClick={hangdleMobile} href='http://localhost:3000/'>Inicio</Link></li>
+                        </ul>
+                    }
 
                 </div>
 

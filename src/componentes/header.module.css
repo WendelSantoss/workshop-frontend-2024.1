@@ -10,7 +10,7 @@
     height: 30px;
 }
 
-.menuMobile{
+.mobile{
     display: none;
 }
 .menu{
@@ -18,20 +18,24 @@
     align-items: center;
     margin-left: 30px;
 }
-.menu a{
+.menu li, .menuMobile li{
+    list-style-type: none;
+}
+.menu a, .menuMobile a{
     color: white;
     font-weight: bold;
     font-size: 20px;
     text-decoration: none; 
 }
 
-.menu a:hover{
+.menu a:hover, .menuMobile a:hover{
     color: #737677;
 }
 .alinhaEsquerda{
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    gap: 10px;
 }
 .search{
     width: 290px;
@@ -47,6 +51,7 @@
     border: none;
     border-radius: 10px;
     color: white;
+    outline: none;
 }
 .search input::placeholder {
     color: white;
@@ -72,13 +77,29 @@
         display: none;
         margin-left: 0;
     }
-    .menuMobile{
+    .mobile{
         display: block;
+        
     }
-    .menuMobile img{
+    .mobile img{
         width: 40px;
         height: 30px;
         cursor: pointer;
+        position: relative;
+    }
+    .menuMobile{
+        padding: 10px;
+        background-color:  #262a2c;
+        text-align: center; 
+        border-radius: 7px;
+        position: absolute;
+        z-index: 2022222;
+        
+    }
+    .menuMobile a{
+        font-size: 13px;
+        color: white;
+
     }
     .search{
         width: 240px;
