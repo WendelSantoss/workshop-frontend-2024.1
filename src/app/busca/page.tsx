@@ -7,7 +7,6 @@ import CardFilmeSerieUnico from "@/componentes/cardFilmeSerieUnico";
 import styles from "./busca.module.css"
 
 
-
 export default function Busca() {
     const [pesquisaFiltrada, setPesquisaFiltrada]= useState<formatoDadosAPI[]>()
     const [loading, setLoading]= useState(true)
@@ -64,10 +63,9 @@ export default function Busca() {
             
                 {pesquisaFiltrada?.map((itens) =>(
                     <div key={itens.id}>
-
+           
                         <CardFilmeSerieUnico dadoFiltrado={itens} loading={loading}/>
-                        
-                    
+                                                                       
                     </div>
                 ))}
             </div>

@@ -57,8 +57,8 @@ export default function Header(){
                     <div className={styles.searchIcon}>
                         {pesquisa &&
                             <Link href={{
-                                pathname: 'busca/',
-                                query: { busca: pesquisa }
+                                pathname: '/busca/',
+                                query: { busca: pesquisa? pesquisa : ''}
                             }}> 
                                 <Image src={Lupa} alt='iconLupa'></Image> 
                             </Link>

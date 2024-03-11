@@ -3,7 +3,6 @@ import useBuscaDados from "@/hoocks/useBuscaDados";
 import { useSearchParams } from "next/navigation";
 import CardFilmeSerieUnico from "@/componentes/cardFilmeSerieUnico";
 
-
 export default function Filme(){
     
     const { dados, loading }= useBuscaDados()
@@ -15,7 +14,10 @@ export default function Filme(){
         return info.name === name ; 
     });
     return(
-    
+
         <CardFilmeSerieUnico dadoFiltrado={dadoFiltrado} loading={loading}/>
+    
+        
+       
     )
 }

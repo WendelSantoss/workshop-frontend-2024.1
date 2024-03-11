@@ -70,14 +70,14 @@ export default function SwiperComponent({ dados }: { dados: formatoDadosAPI[] })
                 <SwiperSlide key={itens.id}>
                     <Link href={{
                                 pathname: 'filme-serie/',
-                                query: { genres: itens.genres , name: itens.name }
+                                query: { genres: itens.genres, name: itens.name }
                             }}>  
                         <div className={styles.cardMovie} >
                             
                             <Image src={itens.image.medium} alt="Banner filme" width={240} height={210}></Image>
                             <div className={styles.boxNota}>
                                 <p>TOP</p>
-                                <p>{itens?.rating?.average !== null ? itens.rating.average.toString() : 'N/A'}</p>
+                                <p>{itens?.rating?.average !== null ? itens.rating.average.toString() : ''}</p>
                             </div>
                         </div>
             

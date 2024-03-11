@@ -1,3 +1,4 @@
+'use client'
 import { useEffect, useState } from "react"
 
 export interface formatoDadosAPI {
@@ -38,27 +39,33 @@ export default function useBuscaDados(){
     useEffect(()=>{
         setLoading(true)
 
-        fetch(`https://api.tvmaze.com/shows`)
-        .then(response=> response.json())
-        .then((data: any)=>{
-           
-            const resultados : formatoDadosAPI[]= data.map((item:any) => ({
-                id: item.id,
-                genres: item.genres,
-                name: item.name,
-                image: {
-                medium: item.image.medium,
-                original: item.image.original,
-                },
-                rating: {
-                average: item.rating ? item.rating.average : 0},
-                summary: item.summary? item.summary : 'Sem descrição.',
-                ended: item.ended,
-            }));
-            setDados(resultados)
-      
-        })
-        .catch(error=> console.log(error))
+        async function getDados(){
+            await fetch(`https://api.tvmaze.com/shows`)
+            .then(response=> response.json())
+            .then((data: any)=>{
+               
+                const resultados : formatoDadosAPI[]= data.map((item:any) => ({
+                    id: item.id,
+                    genres: item.genres,
+                    name: item.name,
+                    image: {
+                    medium: item.image.medium,
+                    original: item.image.original,
+                    },
+                    rating: {
+                    average: item.rating ? item.rating.average : 0},
+                    summary: item.summary? item.summary : 'Sem descrição.',
+                    ended: item.ended,
+                }));
+                setDados(resultados)
+          
+            })
+            .catch(error=> console.log(error))
+        }  
+        
+        getDados()
+            
+        
     },[])
 
     useEffect(()=>{
