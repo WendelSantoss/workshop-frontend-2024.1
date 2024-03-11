@@ -16,33 +16,39 @@ export default function Busca() {
 
     useEffect(() => {
         setLoading(true)
-        fetch(`https://api.tvmaze.com/singlesearch/shows?q=${busca}`)
-            .then(response => response.json())
-            .then((data) => {
-                
-                console.log("aqui",data);
-    
-                const resultados: formatoDadosAPI[] = [data].map((item: any) => ({
-                    id: item.id,
-                    genres: item.genres,
-                    name: item.name,
-                    image: {
-                        medium: item.image.medium,
-                        original: item.image.original,
-                    },
-                    rating: {average: item.rating ? item.rating.average : 0},
-                    summary: item.summary ? item.summary : 'Sem descrição.',
-                    ended: item.ended,
-                }));
-                setPesquisaFiltrada(resultados);
-                setLoading(false)
-                
-            })
-            .catch(error => {
-                setPesquisaFiltrada([])
-                setLoading(false)
-                console.log(error)
-            } );
+
+        if(busca){
+            fetch(`https://api.tvmaze.com/singlesearch/shows?q=${busca}`)
+                .then(response => response.json())
+                .then((data) => {
+                    
+                    console.log("aqui",data);
+        
+                    const resultados: formatoDadosAPI[] = [data].map((item: any) => ({
+                        id: item.id,
+                        genres: item.genres,
+                        name: item.name,
+                        image: {
+                            medium: item.image.medium,
+                            original: item.image.original,
+                        },
+                        rating: {average: item.rating ? item.rating.average : 0},
+                        summary: item.summary ? item.summary : 'Sem descrição.',
+                        ended: item.ended,
+                    }));
+                    setPesquisaFiltrada(resultados);
+                    setLoading(false)
+                    
+                })
+                .catch(error => {
+                    setPesquisaFiltrada([])
+                    setLoading(false)
+                    console.log(error)
+                } );
+        }else{
+            setLoading(false);
+            setPesquisaFiltrada([]);
+        }
     }, [busca, parahms]);
     
   

@@ -32,6 +32,9 @@ export default function CardFilmeSerieUnico({ dadoFiltrado, loading }: CardFilmC
       ) : (
         <Loader loading={loading} />
       )}
+      {!dadoFiltrado && !loading &&
+        <h2> Dados não encontrados. </h2>
+      }
     </div>
   );
 }

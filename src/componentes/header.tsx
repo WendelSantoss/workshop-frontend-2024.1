@@ -55,12 +55,14 @@ export default function Header(){
                     /> 
                     
                     <div className={styles.searchIcon}>
-                        <Link href={{
-                            pathname: 'busca/',
-                            query: { busca: pesquisa }
-                        }}> 
-                            <Image src={Lupa} alt='iconLupa'></Image> 
-                        </Link>
+                        {pesquisa &&
+                            <Link href={{
+                                pathname: 'busca/',
+                                query: { busca: pesquisa }
+                            }}> 
+                                <Image src={Lupa} alt='iconLupa'></Image> 
+                            </Link>
+                        }
                     </div>
                 
                 </div>
