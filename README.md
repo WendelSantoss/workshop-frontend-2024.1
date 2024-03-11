@@ -1,7 +1,7 @@
 ## Desafio do Processo Seletivo da Fábrica de Software 2024.1
 
 - Desfaio proposto para criação de um webSite de filmes, consumindo dados da API https://www.tvmaze.com/api.
--Requisitos:
+- Requisitos:
 • Um header que contenha no mínimo a logo da Netflix e um link de "INÍCIO."
 • Cada filme ou serie  deve mostrar o título, uma imagem do pôster e uma breve sinopse.
 • Adicionar uma seção de destaque com carrossel, apresentando os fotos de filmes ou séries. (Pode usar bibliotecas como Swiper)
@@ -13,7 +13,7 @@
 10/03 às 12hrs, ou seja menos de 2 dias para  concluir o projeto, logo não pude elaborar algo mais sofisticado, apenas foquei em 
 concluir os requisitos para entregar o projeto em tempo.
 
--Tecnolgias e ferramentas utilizadas:
+- Tecnolgias e ferramentas utilizadas:
  • JavaScript
  • TypeScript
  • React/Next.Js
@@ -37,7 +37,7 @@ concluir os requisitos para entregar o projeto em tempo.
      <img src="./public/clickCard.png"/>
     </div> 
  
-- Componente Search para pesquisa de algum produto que possa estar no banco da API utilizada, pesquisas so pelo nome do Filme ou Série: 
+- Componente Search para pesquisa de algum título que possa estar no banco da API utilizada, pesquisas só pelo nome do Filme ou Série: 
     <div aling='center'>
      <img src="./public/pesquisaPrint.png"/>
     </div> 
