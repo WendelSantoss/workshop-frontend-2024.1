@@ -6,14 +6,19 @@ import { formatoDadosAPI } from '@/hoocks/useBuscaDados';
 
 interface CardFilmContentProps {
   dadoFiltrado: formatoDadosAPI | undefined; 
-  loading: boolean;
+  loading?: boolean;
 }
 
 export default function CardFilmeSerieUnico({ dadoFiltrado, loading }: CardFilmContentProps) {
 
   return (
     <div className={styles.main}>
-      {dadoFiltrado ? (
+    
+      {loading && 
+        <Loader loading={loading} />
+      }
+
+      {dadoFiltrado &&
         <>
           <div className={styles.cardFilmUnico}>
             <div className={styles.boxImg}>
@@ -23,15 +28,14 @@ export default function CardFilmeSerieUnico({ dadoFiltrado, loading }: CardFilmC
               <h2>Nome: {dadoFiltrado?.name}</h2>
               <h3>Descrição:</h3>
               <p>{dadoFiltrado?.summary}</p>
-              <h4>Nota: {dadoFiltrado?.rating.average.toString()}</h4>
+              <h4>Nota: {dadoFiltrado?.rating?.average?.toString()}</h4>
+
               <h4>Lançamento: {dadoFiltrado?.ended}</h4>
             </div>
           </div>
           <ButtonVoltar />
         </>
-      ) : (
-        <Loader loading={loading} />
-      )}
+        }
     </div>
   );
 }

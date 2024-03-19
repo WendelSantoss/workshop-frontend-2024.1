@@ -56,18 +56,23 @@ export default function Busca() {
             <div className={styles.main}>
             
                 {loading && <Loader/>}
-
-                {pesquisaFiltrada?.length == 0 && 
-                    <h1>Nenhuma série ou filme foi encontrado relacionado a pesquisa realizada.</h1>
-                }
             
-                {pesquisaFiltrada?.map((itens) =>(
-                    <div key={itens.id}>
-           
-                        <CardFilmeSerieUnico dadoFiltrado={itens} loading={loading}/>
-                                                                       
-                    </div>
-                ))}
+                {pesquisaFiltrada?.length != 0 && !loading &&
+                    pesquisaFiltrada?.map((itens) =>(
+                        <div key={itens.id}>
+            
+                            <CardFilmeSerieUnico dadoFiltrado={itens}/>
+                                                                        
+                        </div>
+                    ))  
+                }
+
+                {pesquisaFiltrada?.length == 0 && !loading && 
+
+                    <h1>Nenhuma série ou filme foi encontrado relacionado a pesquisa realizada.</h1>
+                
+                }
+
             </div>
       
     )
